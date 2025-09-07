@@ -26,6 +26,8 @@
       text-align: center;
       font-size: 3em;
       margin-bottom: 30px;
+      color: #00CEC8;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
     }
 
     ul {
@@ -41,8 +43,19 @@
       padding: 15px 20px;
       border-radius: 8px;
       font-size: 1.2em;
-      display: flex;
-      justify-content: space-between;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .ingredientes {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #ccc;
+      display: none;
     }
 
     .back-btn {
@@ -65,31 +78,98 @@
 </head>
 <body>
   <div class="overlay">
-    <h1>Ofertas de Hoy</h1>
+    <h1>🍹 Ofertas de Hoy 🍸</h1>
     <ul>
-      <li><span>Cubata</span><span>$400</span></li>
-      <li><span>Mojito</span><span>$400</span></li>
-      <li><span>Ron Sour</span><span>$400</span></li>
-      <li><span>Whisky Sour</span><span>$400</span></li>
-      <li><span>Canchanchara</span><span>$350</span></li>
-      <li><span>Frapuccino</span><span>$520</span></li>
-      <li><span>Caipirisima</span><span>$450</span></li>
-      <li><span>Caipiroska</span><span>$450</span></li>
-      <li><span>Caipigin</span><span>$450</span></li>
-      <li><span>Caipivino</span><span>$450</span></li>
-      <li><span>Gin Tonic</span><span>$500</span></li>
-      <li><span>Vodka con Naranja</span><span>$350</span></li>
-      <li><span>Sangría</span><span>$500</span></li>
-      <li><span>Daiquiri Saborizado</span><span>$450</span></li>
-      <li><span>Margarita</span><span>$450</span></li>
-      <li><span>Cubanito</span><span>$520</span></li>
-      <li><span>Bloody Mary</span><span>$450</span></li>
-      <li><span>Piña Colada</span><span>$700</span></li>
-      <li><span>San Francisco</span><span>$350</span></li>
-      <li><span>Limonada</span><span>$300</span></li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Cubata - $400</strong>
+        <div class="ingredientes">Ron añejo,refresco de cola,jugo de lima</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Mojito - $400</strong>
+        <div class="ingredientes">Ron HavanaClub 3años, hierbabuena, azúcar, limón, agua gaseada</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Ron Sour - $400</strong>
+        <div class="ingredientes">Ron, jugo de limón, azúcar,</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Whisky Sour - $400</strong>
+        <div class="ingredientes">Whisky, limón, azúcar</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Canchanchara - $350</strong>
+        <div class="ingredientes">Ron, miel, limón</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Frapuccino - $520</strong>
+        <div class="ingredientes">Café,leche,azucar,licor artesanal(opcional)</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Caipirisima - $450</strong>
+        <div class="ingredientes">Ron, limón, azúcar,</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Caipiroska - $450</strong>
+        <div class="ingredientes">Vodka, limón, azúcar</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Caipigin - $450</strong>
+        <div class="ingredientes">Ginebra, limón, azúcar</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Caipivino - $450</strong>
+        <div class="ingredientes">Vino, limón, azúcar,</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Gin Tonic - $500</strong>
+        <div class="ingredientes">Ginebra, agua tónica,potenciador(opcional)</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Vodka con Naranja - $350</strong>
+        <div class="ingredientes">Vodka, jugo de naranja</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Sangría - $500</strong>
+        <div class="ingredientes">Vino tinto, frutas, azúcar, soda</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Daiquiri Saborizado - $450</strong>
+        <div class="ingredientes">Ron, fruta (fresa, mango, etc.), azúcar</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Margarita - $450</strong>
+        <div class="ingredientes">Tequila, triple sec, limón, sal</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Cubanito - $520</strong>
+        <div class="ingredientes">Ron, jugo de tomate, especias</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Bloody Mary - $450</strong>
+        <div class="ingredientes">Vodka, jugo de tomate, salsa inglesa, limón</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Piña Colada - $700</strong>
+        <div class="ingredientes">orchata de coco,jugo de piña,leche,ron(opcional)</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>San Francisco - $350</strong>
+        <div class="ingredientes">mix de jugos naturales, granadina</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>Limonada - $300</strong>
+        <div class="ingredientes">Limón, azúcar, agua, hielo</div>
+      </li>
     </ul>
 
     <a href="index.html" class="back-btn">← Volver al inicio</a>
   </div>
+
+  <script>
+    function toggleIngredientes(item) {
+      const ingredientes = item.querySelector('.ingredientes');
+      ingredientes.style.display = ingredientes.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
