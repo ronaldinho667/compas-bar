@@ -109,6 +109,25 @@
       font-size: 0.9em;
       color: #666;
     }
+
+    @media (max-width: 768px) {
+  .bloque {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .bloque img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .texto {
+    padding: 10px;
+    font-size: 1em;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -142,6 +161,7 @@
       <img src="static/img/frapu.jpg" alt="Ambiente del bar">
     </div>
   </section>
+    
 
   <footer>
     <p>&copy; 2025 Compas Bar. Todos los derechos reservados.</p>
