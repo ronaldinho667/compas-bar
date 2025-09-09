@@ -4,48 +4,51 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compas Bar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
   <style>
-
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background-color: #e91e63;
-      color: white;
-      font-size: 1.2em;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #c2185b;
-    }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #fff;
+      background-color: white;
+      color: #333;
     }
+
     header {
-      background-color: #222;
+      background-color: #f8f8f8;
       padding: 20px;
       text-align: center;
     }
+
+    header h1 {
+      font-size: 2.5em;
+      font-family: 'Lobster', cursive;
+      background: linear-gradient(90deg, #f09fc5, #ef98d5);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+    }
+
     nav {
-      background-color: #333;
+      background-color: #e91e63;
       display: flex;
       justify-content: center;
-      gap: 20px;
       padding: 10px 0;
     }
+
     nav a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
     }
+
+    nav a:hover {
+      background-color: #c2185b;
+    }
+
     .hero {
       background-image: url('static/img/index.jpg');
       background-size: cover;
@@ -57,46 +60,91 @@
       text-align: center;
       color: white;
     }
+
     .hero h1 {
       background-color: rgba(0,0,0,0.6);
       padding: 20px;
       font-size: 3em;
     }
+
+    .contenido {
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .bloque {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .bloque img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .bloque.izquierda {
+      flex-direction: row;
+    }
+
+    .bloque.derecha {
+      flex-direction: row-reverse;
+    }
+
+    .texto {
+      flex: 1;
+      font-size: 1.1em;
+    }
+
     footer {
-      background-color: #222;
+      background-color: #f0f0f0;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1 style="
-     font-size: 2.5em;
-     background: linear-gradient(90deg, #f09fc5, #ef98d5);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
-     text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-">
-  🍸 Compas Bar 🍹
-</h1>
-
-    </h1>
-
-    <p>Tu lugar favorito donde puedes disfrutar de amplias ofertas de cocteles</p>
+    <h1>🍸 Compas Bar 🍹</h1>
+    <p>Tu lugar favorito donde puedes disfrutar de amplias ofertas de cócteles</p>
   </header>
 
   <nav>
-    <a href="menu.html" class="btn">Ver cocteles en oferta</a>
-
+    <a href="menu.html">Ver cócteles en oferta</a>
   </nav>
 
   <section class="hero">
+    <h1>Bienvenidos a Compas Bar</h1>
   </section>
-  
+
+  <section class="contenido">
+    <div class="bloque izquierda">
+      <img src="static/img/fire.jpg" alt="Cóctel especial">
+      <div class="texto">
+        <h2>Cóctel de la Casa</h2>
+        <p>Disfrute de un fabuloso servicio de cocteleria de autor,donde usted podra disfrutar de un coctel a su medida y experimentar sabores poco comunes, sea usted mismo quien eliga los sabores que desea y nosotros le haremos probar una experiencia inolvidable.</p>
+      </div>
+    </div>
+
+    <div class="bloque derecha">
+      <div class="texto">
+        <h2>Ambiente Exclusivo</h2>
+        <p>Disfrute de una amplia variedad de ofertas en la seccion del cafe.Como le gusta a usted? frio? caliente?, tenemos lo que busca aqui.</p>
+      </div>
+      <img src="static/img/frapu.jpg" alt="Ambiente del bar">
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025[Compas Bar]. All rights reserved.</p>
+    <p>&copy; 2025 Compas Bar. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>
