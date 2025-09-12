@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú de Cócteles - Compas Bar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('static/img/coi.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 30px;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      font-family: 'lobster' , cursive;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    li {
+      background-color: rgba(255, 255, 255, 0.1);
+      margin-bottom: 10px;
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .ingredientes {
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #ccc;
+      display: none;
+    }
+
+    .back-btn {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1em;
+      color: #fff;
+      text-decoration: none;
+      background-color: #e91e63;
+      padding: 12px 25px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1> Ofertas de Hoy </h1>
+    <ul>
+      <li onclick="toggleIngredientes(this)">
+        <strong>cafe expresso -$150</strong>
+        <div class="ingredientes">cafe expresso sencillo colado en maquina profesional</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>cafe americano - $150</strong>
+        <div class="ingredientes">cafe al estilo americano elaborado con un cafe expresso y agregando agua entre 90 y 96 grados</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>cafe cortado - $200</strong>
+        <div class="ingredientes">cafe expresso y leche espumada</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>cafe capuccino - $250</strong>
+        <div class="ingredientes">cafe expresso con leche y un toque de canela</div>
+      </li>
+      <li onclick="toggleIngredientes(this)">
+        <strong>cafe bombon - $250</strong>
+        <div class="ingredientes">leche condensada,cafe y crema de leche</div>
+      </li>
+    </ul>
+    <a href="index.html" class="back-btn">← Volver al inicio</a>
+  </div>
+
+  <script>
+    function toggleIngredientes(item) {
+      const ingredientes = item.querySelector('.ingredientes');
+      ingredientes.style.display = ingredientes.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
