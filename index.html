@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compas Bar</title>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/selima" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -41,7 +42,6 @@
       width: 100%;
       z-index: 1000;
       box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-
     }
 
     nav a {
@@ -54,7 +54,6 @@
       background: linear-gradient(135deg, #69d5bc, #adfdad);
       transition: background-color 0.2s ease;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-
     }
 
     nav a:hover {
@@ -115,6 +114,12 @@
       font-size: 1.1em;
     }
 
+    .texto h2 {
+      font-family: 'Selima', cursive;
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
     footer {
       background-color: #f0f0f0;
       text-align: center;
@@ -124,23 +129,22 @@
     }
 
     @media (max-width: 768px) {
-  .bloque {
-    flex-direction: column !important;
-    text-align: center;
-  }
+      .bloque {
+        flex-direction: column !important;
+        text-align: center;
+      }
 
-  .bloque img {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
+      .bloque img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+      }
 
-  .texto {
-    padding: 10px;
-    font-size: 1em;
-  }
-}
-
+      .texto {
+        padding: 10px;
+        font-size: 1em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -151,7 +155,7 @@
 
   <nav>
     <a href="menu.html">Cócteles en oferta</a>
-    <a href="cafe.html"> Ofertas de baristeria</a>
+    <a href="cafe.html">Ofertas de baristería</a>
   </nav>
 
   <section class="hero">
@@ -160,25 +164,3 @@
 
   <section class="contenido">
     <div class="bloque derecha">
-      <div class="texto">
-        <h2>Cóctel de la Casa</h2>
-        <p>Disfrute de un fabuloso servicio de cocteleria de autor,donde usted podra disfrutar de un coctel a su medida y experimentar sabores poco comunes, sea usted mismo quien eliga los sabores que desea y nosotros le haremos probar una experiencia inolvidable.</p>
-      </div>
-      <img src="static/img/mango.jpg"  alt="Cóctel especial"> 
-    </div>
-
-    <div class="bloque derecha">
-      <div class="texto">
-        <h2>Ambiente Exclusivo</h2>
-        <p>Disfrute de una amplia variedad de ofertas en la seccion de barismo.Como le gusta a usted? frio? caliente?, tenemos lo que busca aqui.</p>
-      </div>
-      <img src="static/img/frapu.png" alt="Ambiente del bar">
-    </div>
-  </section>
-    
-
-  <footer>
-    <p>&copy; 2025 Compas Bar. Todos los derechos reservados.</p>
-  </footer>
-</body>
-</html>
